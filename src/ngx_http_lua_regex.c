@@ -985,6 +985,10 @@ ngx_http_lua_ngx_re_parse_opts(lua_State *L, ngx_lua_regex_compile_t *re,
                 re->options |= PCRE_UTF8;
                 break;
 
+            case 'n':
+                re->options |= PCRE_NO_UTF8_CHECK
+                break;
+
             case 'x':
                 re->options |= PCRE_EXTENDED;
                 break;
